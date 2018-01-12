@@ -1,0 +1,26 @@
+{
+  "name": "card",
+  "version": "1.0.0",
+  "description": "card",
+  "main": "./src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "./node_modules/.bin/electron-packager ./ card --all --out ./dist/electron"
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "1.7.10",
+    "electron-builder": "^19.52.1",
+    "electron-connect": "^0.6.2",
+    "gulp": "^3.9.1",
+    "gulp-electron": "^0.1.3"
+  }
+}

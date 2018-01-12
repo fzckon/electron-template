@@ -1,0 +1,33 @@
+//
+npm install electron --save-dev --save-exact
+//运行包
+npm install --saved-dev electron-prebuilt   
+//运行 
+./node_modules/.bin/electron .
+//打包
+//electron-packager <location of project> <name of project> <platform> <architecture> <electron version> <optional options>
+* location of project：项目所在路径 
+* name of project：打包的项目名字 
+* platform：确定了你要构建哪个平台的应用（Windows、Mac 还是 Linux） 
+* architecture：决定了使用 x86 还是 x64 还是两个架构都用 
+* electron version：electron 的版本 
+* optional options：可选选项
+
+npm install --saved-dev electron-packager 
+npm install --saved-dev electron-builder 
+
+./node_modules/.bin/electron-packager ./ card --all --out ./dist/electron --version 1.7.8 --overwrite //--icon=./src/img/icon/icon.ico
+
+//加密 执行完毕以后，在./下可以看到app.asar文件，把他复制到./OutApp/mclans.../resources/下，
+//然后把resources下的app文件夹删除，运行resources上层的appName.exe文件可以启动应用了
+npm install --save-dev asar
+asar pack ./app app.asar
+
+//使用nsis制作安装程序
+
+//调试 自动化构建工具
+npm install --g gulp
+npm install --save-dev gulp
+
+//npm install electron-connect --save-dev
+npm install --save-dev gulp-electron

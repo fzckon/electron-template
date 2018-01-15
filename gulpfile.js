@@ -67,7 +67,7 @@ var callback = function (electronProcState) {
     }
 };
 
-gulp.task('serve', function () {
+gulp.task('server', function () {
 
     // Start browser process
     electron.start(callback);
@@ -80,6 +80,9 @@ gulp.task('serve', function () {
     //gulp.watch(['./src/main/index.js', './src/main/index.html'], electron.reload);
     gulp.watch(['./src/main/index.js', './src/main/index.html'], ['reload:renderer']);
 
+    // setTimeout(() => {
+    //     process.exit();
+    // }, 1000*2);
 });
 
 gulp.task('restart:browser', function (done) {
@@ -91,9 +94,8 @@ gulp.task('reload:renderer', function (done) {
     // Reload renderer process
     electron.reload(callback);
     setTimeout(function () {
-        electron.broadcast('myNotification');
         done();
     });
 });
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['server']);

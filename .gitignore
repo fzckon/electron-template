@@ -4,3 +4,14 @@ node_modules/
 /node_modules/
 /.vscode
 /.git
+
+
+.vscode/
+cache/*
+dist/electron/*
+dist/web/*
+node_modules/
+release/*
+build/*
+
+!.gitkeep
